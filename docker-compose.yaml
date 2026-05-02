@@ -1,0 +1,11 @@
+services:
+    naming-server:
+        image: douglasmodolo/naming-server:0.0.1-SNAPSHOT
+        ports:
+            - "8761:8761"
+        networks:
+            - curso-spring-network
+networks:
+    curso-spring-network:
+        name: curso-spring-network
+        driver: bridge
