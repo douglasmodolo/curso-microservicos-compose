@@ -8,7 +8,7 @@ services:
             - curso-spring-network
 
     naming-server:
-        image: douglasmodolo/naming-server:0.0.1-SNAPSHOT
+        image: douglasmodolo/naming-server:latest
         ports:
             - "8761:8761"
         depends_on:
@@ -22,7 +22,7 @@ services:
             retries: 5
     
     api-gateway:
-        image: douglasmodolo/api-gateway:0.0.1-SNAPSHOT
+        image: douglasmodolo/api-gateway:latest
         ports:
             - "8765:8765"
         depends_on:
@@ -54,7 +54,7 @@ services:
             retries: 5            
 
     exchange-service:
-        image: douglasmodolo/exchange-service:0.0.1-SNAPSHOT
+        image: douglasmodolo/exchange-service:latest
         restart: always
         build:
             context: ./exchange-service
@@ -98,7 +98,7 @@ services:
             retries: 5          
 
     book-service:
-        image: douglasmodolo/book-service:0.0.1-SNAPSHOT
+        image: douglasmodolo/book-service:latest
         restart: always
         build:
             context: ./book-service
